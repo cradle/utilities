@@ -20,4 +20,4 @@ rake db:bootstrap
 rake db:test:prepare
 rake radiant:extensions:"$underscored":migrate
 cd vendor/extensions/"$underscored"
-rake spec
+rake spec:rcov && open coverage/index.html
