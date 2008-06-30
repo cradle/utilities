@@ -17,7 +17,7 @@ mysqladmin create -u root "$underscored"_development
 mysqladmin drop -u root "$underscored"_test
 mysqladmin create -u root "$underscored"_test
 rake db:bootstrap
-rake db:test:clone_structure
+rake db:test:prepare
 rake radiant:extensions:"$underscored":migrate
 cd vendor/extensions/"$underscored"
 rake spec
