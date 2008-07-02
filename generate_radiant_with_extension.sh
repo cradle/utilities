@@ -19,5 +19,6 @@ mysqladmin create -u root "$underscored"_test
 rake db:bootstrap
 rake db:test:prepare
 rake radiant:extensions:"$underscored":migrate
+RAILS_ENV=test rake radiant:extensions:file_browser:migrate
 cd vendor/extensions/"$underscored"
 rake spec:rcov && open coverage/index.html
